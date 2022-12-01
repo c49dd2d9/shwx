@@ -22,6 +22,7 @@ class CreateDsTopicInfoTable extends Migration
             $table->integer('boardid');
             $table->boolean('is_delete');
             $table->integer('replies');
+            $table->string('thread_color', 20)->nullable();
             $table->bigInteger('lastpost');
             $table->index(['boardid', 'is_delete', 'lastpost']);
             $table->timestamps();
